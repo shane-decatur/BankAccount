@@ -12,4 +12,8 @@ public class BankAccount{
   public String toString(){
     return accountID+"\t"+balance;
   }
+
+  public double getBalance(){
+    return balance;
+  }
 }
