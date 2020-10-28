@@ -22,16 +22,22 @@ public class BankAccount{
   }
 
   public boolean deposit(double amount){
-    if (amount >= 0) balance += amount;
+    if (amount >= 0) {
+      balance += amount;
+      return true;
+    }
     return (amount >= 0);
   }
 
   public boolean withdraw(double amount){
-    if (amount >= 0 && amount <= balance) balance -= amount;
+    if (amount >= 0 && amount <= balance) {
+      balance -= amount;
+      return true;
+    }
     return (amount >= 0 && amount <= balance);
   }
 
   public String toString(){
-    return accountID+"\t"+balance;
+    return "#"+accountID+"\t$"+balance;
   }
 }
